@@ -16,7 +16,7 @@ In the recent school project, we have set up a simple REST API to handle a Hacke
 
 The backend for our web application is a Node.js instance running an Express server with mongoose to model our data to a Mongo database. Each post has several fields most related to the post itself, but some also relating the post to users and other posts.
 
-![](/images/logo.png)
+![](/pics/Capture.PNG)
 
 Our web application is hosted on digitalocean on a very limited server. The server has 1GB of RAM, and 30GB of disk space, and 1 CPU core.
 
