@@ -44,6 +44,7 @@ Or you can download a docker image including all the bells and whistles from Doc
 If you use the image you have to start the mongo shell like this.
 
 ![](/pics/Screenshot-at-2017-12-0920-30-02.png)
+
 *mongodb is the name of the container and mongo is the
 name of the application we want to execute.*
 
@@ -52,6 +53,7 @@ When you’re finally connected to you MongoDB instance you’ll have to navigat
 __db.collectionName.createIndex({ field : order })__
 
 ![](/pics/Screenshot-at-2017-12-0920-23-35.png)
+
 *posts is the name of the collection, post_parent is the field and the -1 
 ensures that the index is created in an descending order*
 
@@ -63,6 +65,7 @@ To ensure that your indices remain a tolerable size, you can always use the mong
 __db.collectionName.totalIndexSize( )__
 
 ![](/pics/Screenshot-at-2017-12-09 20-14-04.png)
+
 *The result you see, is the number of bytes taken by 
 the indices in the posts collection.*
 
@@ -70,6 +73,7 @@ If you installed the docker image mentioned above, you can skip a lot of hoops b
 __~$ docker stats --no-stream__
 
 ![](/pics/Screenshot-at-2017-12-0920-17-03.png)
+
 *docker stats list the memory usage in an easy to digest fashion, without the need for 
 strenuous conversion between bytes and megabytes.*
 
