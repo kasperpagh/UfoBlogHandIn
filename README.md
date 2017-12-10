@@ -89,24 +89,12 @@ Using a MongoDB one must be weary of the amount of data that they have to handle
 
 ## Sources
 https://docs.mongodb.com/v3.4/indexes/
+
 https://docs.mongodb.com/getting-started/shell/client/ 
+
 https://docs.mongodb.com/v3.0/administration/analyzing-mongodb-performance/
+
 https://docs.docker.com/engine/reference/commandline/stats/
-
-#### Thank you for reading! 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 [^1]:https://docs.mongodb.com/v3.4/indexes/
