@@ -38,7 +38,7 @@ To introduce indices to your own collections is easy! The first thing you do is 
 
 You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
 
-![](/images/logo.png)
+![](/pics/Screenshot at 2017-12-0920-29-05.png)
 
 Or you can download a docker image including all the bells and whistles from DockerHub.
 If you use the image you have to start the mongo shell like this.
