@@ -29,7 +29,7 @@ Our web application is hosted on digitalocean on a very limited server. The serv
 Our backend ended up creating some issues. As the post counts started getting into the millions the response time of our backend had gotten excruciatingly slow. No person would want for any web service they use, to take upwards of 15 seconds per request. We had to fix this issue both for our sake and our users. Indices was our solution.
 
 <p align="center"><i>“Indices are special data structures that store a small portion of the collection’s data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field”</p>
-<p align="center"><a href="https://docs.mongodb.com/getting-started/shell/client/">-MongoDB documentation</a></p>
+<p align="center"><a href="https://docs.mongodb.com/v3.4/indexes/">-MongoDB documentation</a></p>
 
 What this does is allow our database to search through far less data every time a request is made. This small but significant change in our database structure reduced the response time all the way down to 50ms in some cases.
 
@@ -42,7 +42,7 @@ You can either use a local instance of the mongo shell (HINT! If Mongo is in you
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="50%" height="50%" border="5"></p>
 
-Or you can download a docker image including all the bells and whistles from DockerHub.[^3]
+Or you can download a docker image including all the bells and whistles from DockerHub.[^4]
 If you use the image you have to start the mongo shell like this.
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="50%" height="50%" border="5"></p>
@@ -96,4 +96,5 @@ https://docs.docker.com/engine/reference/commandline/stats/
 
 [^1]:https://docs.mongodb.com/v3.4/indexes/
 [^2]:https://docs.mongodb.com/v3.4/indexes/
-[^3]:https://hub.docker.com/_/mongo/ 
+[^3]:https://docs.mongodb.com/getting-started/shell/client/
+[^4]:https://hub.docker.com/_/mongo/ 
