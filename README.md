@@ -43,17 +43,17 @@ You can either use a local instance of the mongo shell (HINT! If Mongo is in you
 Or you can download a docker image including all the bells and whistles from DockerHub.
 If you use the image you have to start the mongo shell like this.
 
-![mongodb is the name of the container and mongo is the
-name of the application we want to execute.](/pics/Screenshot-at-2017-12-0920-30-02.png)
-
+![](/pics/Screenshot-at-2017-12-0920-30-02.png)
+*mongodb is the name of the container and mongo is the
+name of the application we want to execute.*
 
 When you’re finally connected to you MongoDB instance you’ll have to navigate to the database where your collections reside and actually create the indices.
 
 __db.collectionName.createIndex({ field : order })__
 
-![](/images/logo.png)
-Format: ![posts is the name of the collection, post_parent is the field and the -1 
-ensures that the index is created in an descending order]
+![](/pics/Screenshot-at-2017-12-0920-23-35.png)
+*posts is the name of the collection, post_parent is the field and the -1 
+ensures that the index is created in an descending order*
 
 If the command is successful the Mongo shell will present you with something like the output you see in the above image, except with values according to your system. 
  
@@ -62,21 +62,16 @@ For indices to perform at their best the data structures that are created have t
 To ensure that your indices remain a tolerable size, you can always use the mongo shell command.
 __db.collectionName.totalIndexSize( )__
 
-![db.collectionName.totalIndexSize( )](/Screenshot at 2017-12-09 20-14-04.png)
-Format: ![The result you see, is the number of bytes taken by 
-the indices in the posts collection.]
-
-The result you see, is the number of bytes taken by 
-the indices in the posts collection.
+![](/pics/Screenshot-at-2017-12-09 20-14-04.png)
+*The result you see, is the number of bytes taken by 
+the indices in the posts collection.*
 
 If you installed the docker image mentioned above, you can skip a lot of hoops by running the following command in a shell.
 __~$ docker stats --no-stream__
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-
-docker stats list the memory usage in an easy to digest fashion, without the need for 
-strenuous conversion between bytes and megabytes.
+![](/pics/Screenshot-at-2017-12-0920-17-03.png)
+*docker stats list the memory usage in an easy to digest fashion, without the need for 
+strenuous conversion between bytes and megabytes.*
 
 ## What We Can Learn From This
 
