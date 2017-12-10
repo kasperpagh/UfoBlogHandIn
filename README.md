@@ -28,8 +28,9 @@ Our web application is hosted on digitalocean on a very limited server. The serv
 
 Our backend ended up creating some issues. As the post counts started getting into the millions the response time of our backend had gotten excruciatingly slow. No person would want for any web service they use, to take upwards of 15 seconds per request. We had to fix this issue both for our sake and our users. Indices was our solution.
 
-*“Indices are special data structures that store a small portion of the collection’s data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field”[^1]*
--MongoDB documentation
+<p align="center">“Indices are special data structures that store a small portion of the collection’s data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field”[^1]</p>
+
+<p align="center">-MongoDB documentation</p>
 
 What this does is allow our database to search through far less data every time a request is made. This small but significant change in our database structure reduced the response time all the way down to 50ms in some cases.
 
@@ -40,12 +41,12 @@ To introduce indices to your own collections is easy! The first thing you do is 
 
 You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
 
-![](/pics/Screenshot-at-2017-12-0920-29-05.png)
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="25%" height="25%" border="5"></p>
 
 Or you can download a docker image including all the bells and whistles from DockerHub.[^4]
 If you use the image you have to start the mongo shell like this.
 
-![](/pics/Screenshot-at-2017-12-0920-30-02.png)
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="25%" height="25%" border="5"></p>
 
 *mongodb is the name of the container and mongo is the
 name of the application we want to execute.*
@@ -54,7 +55,8 @@ When you’re finally connected to you MongoDB instance you’ll have to navigat
 
 __db.collectionName.createIndex({ field : order })__
 
-![](/pics/Screenshot-at-2017-12-0920-23-35.png)
+
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-23-35.png" alt="" width="25%" height="25%" border="5"></p>
 
 *posts is the name of the collection, post_parent is the field and the -1 
 ensures that the index is created in an descending order*
@@ -66,7 +68,8 @@ For indices to perform at their best the data structures that are created have t
 To ensure that your indices remain a tolerable size, you can always use the mongo shell command.
 __db.collectionName.totalIndexSize( )__
 
-![](/pics/Screenshot-at-2017-12-0920-14-04.png)
+
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-14-04.png" alt="" width="25%" height="25%" border="5"></p>
 
 *The result you see, is the number of bytes taken by 
 the indices in the posts collection.*
@@ -74,7 +77,7 @@ the indices in the posts collection.*
 If you installed the docker image mentioned above, you can skip a lot of hoops by running the following command in a shell.
 __~$ docker stats --no-stream__
 
-![](/pics/Screenshot-at-2017-12-0920-17-03.png)
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="25%" height="25%" border="5"></p>
 
 *docker stats list the memory usage in an easy to digest fashion, without the need for 
 strenuous conversion between bytes and megabytes.*
