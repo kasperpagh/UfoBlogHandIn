@@ -77,3 +77,7 @@ Format: ![Alt Text](url)
 
 docker stats list the memory usage in an easy to digest fashion, without the need for 
 strenuous conversion between bytes and megabytes.
+
+## What We Can Learn From This
+
+Using a MongoDB one must be weary of the amount of data that they have to handle. When handling millions of data points, it is imperative to use indices if you do not wish to demolish your users experiences. Indices are not difficult to setup and they allow for a faster performance. Lastly one must also make sure that their server has enough ram to handle large amounts of data especially when indexed.
