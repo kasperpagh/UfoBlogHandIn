@@ -12,9 +12,15 @@ Everyone who handles large numbers of documents in MongoDB and isn't already usi
 
 In the recent school project, we have set up a simple REST API to handle a HackerNews clone site. For this basic site our teacher would automatically post posts to our API over the projects time period. This ended up with us having millions on posts stored in our database, since we were getting new posts all the time over several weeks. As of right now we have over 5 million posts:
 
+![](/images/logo.png)
+
 The backend for our web application is a Node.js instance running an Express server with mongoose to model our data to a Mongo database. Each post has several fields most related to the post itself, but some also relating the post to users and other posts.
 
+![](/images/logo.png)
+
 Our web application is hosted on digitalocean on a very limited server. The server has 1GB of RAM, and 30GB of disk space, and 1 CPU core.
+
+![](/images/logo.png)
 
 ## Indices, What are They?
 
@@ -32,29 +38,22 @@ To introduce indices to your own collections is easy! The first thing you do is 
 
 You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+![](/images/logo.png)
 
 Or you can download a docker image including all the bells and whistles from DockerHub.
 If you use the image you have to start the mongo shell like this.
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-
-mongodb is the name of the container and mongo is the
-name of the application we want to execute.
-
-
+![](/images/logo.png)
+Format: ![mongodb is the name of the container and mongo is the
+name of the application we want to execute.]
 
 When you’re finally connected to you MongoDB instance you’ll have to navigate to the database where your collections reside and actually create the indices.
 
 __db.collectionName.createIndex({ field : order })__
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-
-posts is the name of the collection, post_parent is the field and the -1 
-ensures that the index is created in an descending order
+![](/images/logo.png)
+Format: ![posts is the name of the collection, post_parent is the field and the -1 
+ensures that the index is created in an descending order]
 
 If the command is successful the Mongo shell will present you with something like the output you see in the above image, except with values according to your system. 
  
