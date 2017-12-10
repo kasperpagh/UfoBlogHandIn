@@ -38,14 +38,14 @@ To introduce indices to your own collections is easy! The first thing you do is 
 
 You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
 
-![](/pics/Screenshot at 2017-12-0920-29-05.png)
+![](/pics/Screenshot-at-2017-12-0920-29-05.png)
 
 Or you can download a docker image including all the bells and whistles from DockerHub.
 If you use the image you have to start the mongo shell like this.
 
-![](/images/logo.png)
-Format: ![mongodb is the name of the container and mongo is the
-name of the application we want to execute.]
+![mongodb is the name of the container and mongo is the
+name of the application we want to execute.](/pics/Screenshot-at-2017-12-0920-30-02.png)
+
 
 When you’re finally connected to you MongoDB instance you’ll have to navigate to the database where your collections reside and actually create the indices.
 
