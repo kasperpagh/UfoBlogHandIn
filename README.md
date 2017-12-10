@@ -28,7 +28,7 @@ Our web application is hosted on digitalocean on a very limited server. The serv
 
 Our backend ended up creating some issues. As the post counts started getting into the millions the response time of our backend had gotten excruciatingly slow. No person would want for any web service they use, to take upwards of 15 seconds per request. We had to fix this issue both for our sake and our users. Indices was our solution.
 
-<p align="center"><i>“Indices are special data structures that store a small portion of the collection’s data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field” [^3]</i></p>
+<p align="center"><i>“Indices are special data structures that store a small portion of the collection’s data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field”</i></p>[^3] 
 
 <p align="center">-MongoDB documentation</p>
 
