@@ -1,4 +1,4 @@
-# The Road to Rapid Mongo Queries
+# The Road to Rapid Mongo Queries by Alexandar Kraunsøe, David Samuelsen & Kasper Pagh
 
 In a recent project we used MongoDB to store a very large dataset (millions of entries). But as the number of saved documents increased, we saw a steep decline in the performance of our queries to the database.
 
@@ -12,7 +12,8 @@ Everyone who handles large numbers of documents in MongoDB and isn't already usi
 
 In the recent school project, we have set up a simple REST API to handle a HackerNews clone site. For this basic site our teacher would automatically post posts to our API over the projects time period. This ended up with us having millions of posts stored in our database, since we were getting new posts all the time over several weeks. As of right now we have over 5 million posts:
 
-![](/pics/david1.PNG)
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/david1.PNG" alt="" width="25%" height="25%" border="5"></p>
+
 
 The backend for our web application is a Node.js instance running an Express server with mongoose to model our data to a Mongo database. Each post has several fields most related to the post itself, but some also relating the post to users and other posts.
 
@@ -80,6 +81,13 @@ strenuous conversion between bytes and megabytes.*
 ## What We Can Learn From This
 
 Using a MongoDB one must be weary of the amount of data that they have to handle. When handling millions of data points, it is imperative to use indices if you do not wish to demolish your users experiences. Indices are not difficult to setup and they allow for a faster performance. Lastly one must also make sure that their server has enough ram to handle large amounts of data especially when indexed.
+
+## Sources
+https://docs.mongodb.com/v3.4/indexes/
+https://docs.mongodb.com/getting-started/shell/client/ 
+https://docs.mongodb.com/v3.0/administration/analyzing-mongodb-performance/
+https://docs.docker.com/engine/reference/commandline/stats/
+
 
 [^1]:https://docs.mongodb.com/v3.4/indexes/
 [^2]:https://docs.mongodb.com/v3.4/indexes/
