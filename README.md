@@ -26,3 +26,54 @@ __-MongoDB documentation__
 What this does is allow our database to search through far less data every time a request is made. This small but significant change in our database structure reduced the response time all the way down to 50ms in some cases.
 
 Why did we need indices though?  We chose to use MongoDB for our database which is a noSQL database. An SQL database has a lot more structure built into its system already, thus as the data load increases the response time doesn’t necessarily do the same. With MongoDB on the other hand, it performs a collection scan, scanning through every element in the collection. This scan is obviously extremely fast so with small amounts of data the response time isn’t gonna be affected enough to decrease the user experience, but that isn’t the case for us. We have several million pieces of data for our database to go through, and for every request the database would have to search through all of these. It makes sense that even machines have a limit as to how fast they work, and therefore by adding indices to our data structure, we limit the amount of data which we have to scan through.
+
+## Indices in Practice
+To introduce indices to your own collections is easy! The first thing you do is to connect to your instance of MongoDB using the Mongo Shell.
+
+You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
+
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
+Or you can download a docker image including all the bells and whistles from DockerHub.
+If you use the image you have to start the mongo shell like this.
+
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
+mongodb is the name of the container and mongo is the
+name of the application we want to execute.
+
+
+
+When you’re finally connected to you MongoDB instance you’ll have to navigate to the database where your collections reside and actually create the indices.
+
+__db.collectionName.createIndex({ field : order })__
+
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
+posts is the name of the collection, post_parent is the field and the -1 
+ensures that the index is created in an descending order
+
+If the command is successful the Mongo shell will present you with something like the output you see in the above image, except with values according to your system. 
+ 
+For indices to perform at their best the data structures that are created have to be stored in memory. This makes it easy for mongo to traverse the documents when you query the collection. Incase the size of your index exceeds the available memory, MongoDB will save the index on the disc which is slower by quite a margin. 
+
+To ensure that your indices remain a tolerable size, you can always use the mongo shell command.
+__db.collectionName.totalIndexSize( )__
+
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
+The result you see, is the number of bytes taken by 
+the indices in the posts collection.
+
+If you installed the docker image mentioned above, you can skip a lot of hoops by running the following command in a shell.
+__~$ docker stats --no-stream__
+
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
+docker stats list the memory usage in an easy to digest fashion, without the need for 
+strenuous conversion between bytes and megabytes.
