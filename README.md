@@ -33,16 +33,16 @@ Our backend ended up creating some issues. As the post counts started getting in
 
 What this does is allow our database to search through far less data every time a request is made. This small but significant change in our database structure reduced the response time all the way down to 50ms in some cases.
 
-Why did we need indices though?  We chose to use MongoDB for our database which is a noSQL database. An SQL database has a lot more structure built into its system already, thus as the data load increases the response time doesn’t necessarily do the same. With MongoDB on the other hand, it performs a collection scan, scanning through every element in the collection[^2]. This scan is obviously extremely fast so with small amounts of data the response time isn’t gonna be affected enough to decrease the user experience, but that isn’t the case for us. We have several million pieces of data for our database to go through, and for every request the database would have to search through all of these. It makes sense that even machines have a limit as to how fast they work, and therefore by adding indices to our data structure, we limit the amount of data which we have to scan through.
+Why did we need indices though?  We chose to use MongoDB for our database which is a noSQL database. An SQL database has a lot more structure built into its system already, thus as the data load increases the response time doesn’t necessarily do the same. With MongoDB on the other hand, it performs a collection scan, scanning through every element in the collection[^1]. This scan is obviously extremely fast so with small amounts of data the response time isn’t gonna be affected enough to decrease the user experience, but that isn’t the case for us. We have several million pieces of data for our database to go through, and for every request the database would have to search through all of these. It makes sense that even machines have a limit as to how fast they work, and therefore by adding indices to our data structure, we limit the amount of data which we have to scan through.
 
 ## Indices in Practice
-To introduce indices to your own collections is easy! The first thing you do is to connect to your instance of MongoDB using the Mongo Shell.[^3]
+To introduce indices to your own collections is easy! The first thing you do is to connect to your instance of MongoDB using the Mongo Shell.[^2]
 
 You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="50%" height="50%" border="5"></p>
 
-Or you can download a docker image including all the bells and whistles from DockerHub.[^4]
+Or you can download a docker image including all the bells and whistles from DockerHub.[^3]
 If you use the image you have to start the mongo shell like this.
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="50%" height="50%" border="5"></p>
@@ -95,6 +95,5 @@ https://docs.docker.com/engine/reference/commandline/stats/
 
 
 [^1]:https://docs.mongodb.com/v3.4/indexes/
-[^2]:https://docs.mongodb.com/v3.4/indexes/
-[^3]:https://docs.mongodb.com/getting-started/shell/client/
-[^4]:https://hub.docker.com/_/mongo/ 
+[^2]:https://docs.mongodb.com/getting-started/shell/client/
+[^3]:https://hub.docker.com/_/mongo/ 
