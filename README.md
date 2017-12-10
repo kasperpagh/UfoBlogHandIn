@@ -77,7 +77,9 @@ the indices in the posts collection.*
 If you installed the docker image mentioned above, you can skip a lot of hoops by running the following command in a shell.
 __~$ docker stats --no-stream__
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="50%" height="50%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="100%" height="100%" border="5"></p>
+
+
 
 *docker stats list the memory usage in an easy to digest fashion, without the need for 
 strenuous conversion between bytes and megabytes.*
