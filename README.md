@@ -1,5 +1,5 @@
 # The Road to Rapid Mongo Queries 
-*by Alexandar Kraunsøe, David Samuelsen & Kasper Pagh*
+*by Alexandar Kraunsøe, David Blum S & Kasper Pagh*
 
 In a recent project we used MongoDB to store a very large dataset (millions of entries). But as the number of saved documents increased, we saw a steep decline in the performance of our queries to the database.
 
