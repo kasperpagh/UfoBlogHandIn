@@ -28,8 +28,7 @@ Our web application is hosted on digitalocean on a very limited server. The serv
 
 Our backend ended up creating some issues. As the post counts started getting into the millions the response time of our backend had gotten excruciatingly slow. No person would want for any web service they use, to take upwards of 15 seconds per request. We had to fix this issue both for our sake and our users. Indices was our solution.
 
-<p align="center"><i>“Indices are special data structures that store a small portion of the collection’s data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field”</i></p>[^3] 
-
+<p align="center"><a href="https://docs.mongodb.com/getting-started/shell/client/"><i>“Indices are special data structures that store a small portion of the collection’s data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field”</a></a></p>
 <p align="center">-MongoDB documentation</p>
 
 What this does is allow our database to search through far less data every time a request is made. This small but significant change in our database structure reduced the response time all the way down to 50ms in some cases.
@@ -97,5 +96,4 @@ https://docs.docker.com/engine/reference/commandline/stats/
 
 [^1]:https://docs.mongodb.com/v3.4/indexes/
 [^2]:https://docs.mongodb.com/v3.4/indexes/
-[^3]:https://docs.mongodb.com/getting-started/shell/client/ 
 [^4]:https://hub.docker.com/_/mongo/ 
