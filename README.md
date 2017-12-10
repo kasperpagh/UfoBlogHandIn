@@ -17,12 +17,12 @@ In the recent school project, we have set up a simple REST API to handle a Hacke
 
 The backend for our web application is a Node.js instance running an Express server with mongoose to model our data to a Mongo database. Each post has several fields most related to the post itself, but some also relating the post to users and other posts.
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Capture.PNG" alt="" width="25%" height="25%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Capture.PNG" alt="" width="50%" height="50%" border="5"></p>
 
 Our web application is hosted on digitalocean on a very limited server. The server has 1GB of RAM, and 30GB of disk space, and 1 CPU core.
 
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/davidDoShot.PNG" alt="" width="25%" height="25%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/davidDoShot.PNG" alt="" width="50%" height="50%" border="5"></p>
 
 ## Indices, What are They?
 
@@ -41,12 +41,12 @@ To introduce indices to your own collections is easy! The first thing you do is 
 
 You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="25%" height="25%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="50%" height="50%" border="5"></p>
 
 Or you can download a docker image including all the bells and whistles from DockerHub.[^4]
 If you use the image you have to start the mongo shell like this.
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="25%" height="25%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="50%" height="50%" border="5"></p>
 
 *mongodb is the name of the container and mongo is the
 name of the application we want to execute.*
@@ -56,7 +56,7 @@ When you’re finally connected to you MongoDB instance you’ll have to navigat
 __db.collectionName.createIndex({ field : order })__
 
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-23-35.png" alt="" width="25%" height="25%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-23-35.png" alt="" width="50%" height="50%" border="5"></p>
 
 *posts is the name of the collection, post_parent is the field and the -1 
 ensures that the index is created in an descending order*
@@ -69,7 +69,7 @@ To ensure that your indices remain a tolerable size, you can always use the mong
 __db.collectionName.totalIndexSize( )__
 
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-14-04.png" alt="" width="25%" height="25%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-14-04.png" alt="" width="50%" height="50%" border="5"></p>
 
 *The result you see, is the number of bytes taken by 
 the indices in the posts collection.*
@@ -77,7 +77,7 @@ the indices in the posts collection.*
 If you installed the docker image mentioned above, you can skip a lot of hoops by running the following command in a shell.
 __~$ docker stats --no-stream__
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="25%" height="25%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="50%" height="50%" border="5"></p>
 
 *docker stats list the memory usage in an easy to digest fashion, without the need for 
 strenuous conversion between bytes and megabytes.*
