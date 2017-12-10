@@ -78,10 +78,8 @@ __~$ docker stats --no-stream__
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="100%" height="100%" border="5"></p>
 
-
-
-*docker stats list the memory usage in an easy to digest fashion, without the need for 
-strenuous conversion between bytes and megabytes.*
+<p align="center"><i><font size="10">docker stats list the memory usage in an easy to digest fashion, without the need for 
+ strenuous conversion between bytes and megabytes.</font></i></p>
 
 ## What We Can Learn From This
 
