@@ -42,7 +42,7 @@ You can either use a local instance of the mongo shell (HINT! If Mongo is in you
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="50%" height="50%" border="5"></p>
 
-Or you can download a docker image including all the bells and whistles from DockerHub.[^4]
+Or you can download a docker image including all the bells and whistles from DockerHub.[^3]
 If you use the image you have to start the mongo shell like this.
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="50%" height="50%" border="5"></p>
@@ -96,4 +96,4 @@ https://docs.docker.com/engine/reference/commandline/stats/
 
 [^1]:https://docs.mongodb.com/v3.4/indexes/
 [^2]:https://docs.mongodb.com/v3.4/indexes/
-[^4]:https://hub.docker.com/_/mongo/ 
+[^3]:https://hub.docker.com/_/mongo/ 
