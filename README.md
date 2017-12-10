@@ -47,8 +47,8 @@ If you use the image you have to start the mongo shell like this.
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="50%" height="50%" border="5"></p>
 
-*mongodb is the name of the container and mongo is the
-name of the application we want to execute.*
+<p align="center"><i><font size="10">mongodb is the name of the container and mongo is the
+name of the application we want to execute.r</font></i></p>
 
 When you’re finally connected to you MongoDB instance you’ll have to navigate to the database where your collections reside and actually create the indices.
 
@@ -57,8 +57,8 @@ __db.collectionName.createIndex({ field : order })__
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-23-35.png" alt="" width="50%" height="50%" border="5"></p>
 
-*posts is the name of the collection, post_parent is the field and the -1 
-ensures that the index is created in an descending order*
+<p align="center"><i><font size="10">posts is the name of the collection, post_parent is the field and the -1 
+ensures that the index is created in an descending order</font></i></p>
 
 If the command is successful the Mongo shell will present you with something like the output you see in the above image, except with values according to your system. 
  
@@ -70,15 +70,15 @@ __db.collectionName.totalIndexSize( )__
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-14-04.png" alt="" width="50%" height="50%" border="5"></p>
 
-*The result you see, is the number of bytes taken by 
-the indices in the posts collection.*
+<p align="center"><i><font size="10">The result you see, is the number of bytes taken by 
+the indices in the posts collection</font></i></p>
 
 If you installed the docker image mentioned above, you can skip a lot of hoops by running the following command in a shell.
 __~$ docker stats --no-stream__
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="100%" height="100%" border="5"></p>
 
-<p align="center" style="margin-left:1000px;margin-right:1000px;"><i><font size="10">docker stats list the memory usage in an easy to digest fashion, without the need for 
+<p align="center"><i><font size="10">docker stats list the memory usage in an easy to digest fashion, without the need for 
  strenuous conversion between bytes and megabytes.</font></i></p>
 
 ## What We Can Learn From This
