@@ -64,7 +64,7 @@ For indices to perform at their best the data structures that are created have t
 To ensure that your indices remain a tolerable size, you can always use the mongo shell command.
 __db.collectionName.totalIndexSize( )__
 
-![](/pics/Screenshot-at-2017-12-09-20-14-04.png)
+![](/pics/Screenshot-at-2017-12-0920-14-04.png)
 
 *The result you see, is the number of bytes taken by 
 the indices in the posts collection.*
