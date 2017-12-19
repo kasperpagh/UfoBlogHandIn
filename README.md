@@ -101,6 +101,6 @@ https://docs.mongodb.com/v3.0/administration/analyzing-mongodb-performance/
 https://docs.docker.com/engine/reference/commandline/stats/
 
 
-[^1]:https://docs.mongodb.com/v3.4/indexes/
-[^2]:https://docs.mongodb.com/getting-started/shell/client/
-[^3]:https://hub.docker.com/_/mongo/ 
+[^1]: https://docs.mongodb.com/v3.4/indexes/
+[^2]: https://docs.mongodb.com/getting-started/shell/client/
+[^3]: https://hub.docker.com/_/mongo/ 
