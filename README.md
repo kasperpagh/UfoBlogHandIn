@@ -20,7 +20,7 @@ In the recent school project, we have set up a simple REST API to handle a Hacke
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/david1.PNG" alt="" width="25%" height="25%" border="5"></p>
 
-<p align="center"><i><font size="10">the number of individual post elements in the posts collection</font></i></p>
+<p align="center"><i><font size="10">The number of individual post elements in the posts collection.</font></i></p>
 
 
 The backend for our web application is a Node.js instance running an Express server with mongoose to model our data to a Mongo database. Each post has several fields most related to the post itself, but some also relating the post to users and other posts.
@@ -70,14 +70,14 @@ You can either use a local instance of the mongo shell (HINT! If Mongo is in you
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="50%" height="50%" border="5"></p>
 
-<p align="center"><i><font size="10">locally installed mongo shell instance connecting to mongoDB</font></i></p>
+<p align="center"><i><font size="10">Locally installed mongo shell instance connecting to mongoDB.</font></i></p>
 
 Or you can download a docker image including all the bells and whistles from DockerHub<a href="https://hub.docker.com/_/mongo/"><sup>[**3**]</sup></a>.
 If you use the image you have to start the mongo shell like this.
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-30-02.png" alt="" width="50%" height="50%" border="5"></p>
 
-<p align="center"><i><font size="10">mongodb is the name of the container and mongo is the
+<p align="center"><i><font size="10">Mongodb is the name of the container and mongo is the
 name of the application we want to execute.</font></i></p>
 
 When you’re finally connected to you MongoDB instance you’ll have to navigate to the database where your collections reside and actually create the indices.
@@ -109,7 +109,7 @@ __~$ docker stats --no-stream__
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-17-03.png" alt="" width="100%" height="100%" border="5"></p>
 
 
-<p align="center"><i><font size="10">docker stats list the memory usage in an easy to digest fashion, without the need for 
+<p align="center"><i><font size="10">Docker stats list the memory usage in an easy to digest fashion, without the need for 
  strenuous conversion between bytes and megabytes.</font></i></p>
 
 ## What We Can Learn From This
