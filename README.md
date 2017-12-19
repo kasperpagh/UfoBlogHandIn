@@ -106,7 +106,7 @@ __~$ docker stats --no-stream__
 Using a MongoDB one must be weary of the amount of data that they have to handle. When handling millions of data points, it is imperative to use indices if you do not wish to demolish your users experiences. Indices are not difficult to setup and they allow for a faster performance. Lastly one must also make sure that their server has enough ram to handle large amounts of data especially when indexed.
 
 ## Further Reading
-If you found this interesting, check out the below links for further reading.
+If you found this interesting, check out the links below for more information.
 
 https://docs.mongodb.com/manual/core/index-single/
 
