@@ -136,5 +136,5 @@ https://docs.mongodb.com/manual/core/query-optimization/
 
 3) https://docs.docker.com/engine/reference/commandline/stats/
 
-# Update 
+## Update 
 Please click the <i>issues</i> tap at the top of the page and navigate to the <i>closed issues</i> where you can find the original issues aswell as our comments and updates.
