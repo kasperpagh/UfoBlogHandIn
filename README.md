@@ -12,7 +12,7 @@ Everyone who handles large numbers of documents in MongoDB and isn't already usi
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/photo_2017-12-19_22-41-38.jpg" alt="" width="70%" height="70%" border="5"></p>
 
-<p align="center"><i><font size="10">A graph showing the difference in response time from before and after introducing indices in the post collection. Please note that the Y-axsis (milliseconds) is logarithmic.</font></i></p>
+<p align="center"><i><font size="10">A graph showing the difference in response time from before and after introducing indices in the post collection. Please note that the Y-axis (milliseconds) is logarithmic.</font></i></p>
 
 ## Description of the Database
 
