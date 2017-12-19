@@ -18,7 +18,25 @@ In the recent school project, we have set up a simple REST API to handle a Hacke
 
 The backend for our web application is a Node.js instance running an Express server with mongoose to model our data to a Mongo database. Each post has several fields most related to the post itself, but some also relating the post to users and other posts.
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Capture.PNG" alt="" width="75%" height="75%" border="5"></p>
+```JSON
+{
+	"_id": "5a36cca1b29bc8000fbff9f2",
+	"post_id": "3035895",
+	"total_score": 2,
+	"created_at": "2017-12-17T19:59:29.695Z",
+	"updated_at": "2017-12-17T20:01:57.190Z",
+	"user_name": "babel",
+	"post_type": "story",
+	"post_title": "Take care of my plant",
+	"post_parent": -1,
+	"post_text": "http://www.pleasetakecareofmyplant.com/",
+	"post_upvotes": 3,
+	"post_downvotes": 1,
+	"post_flagged": 2,
+	"__v": 0,
+	"comments": []
+}
+```
 
 Our web application is hosted on digitalocean on a very limited server. The server has 1GB of RAM, and 30GB of disk space, and 1 CPU core.
 
