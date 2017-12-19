@@ -10,7 +10,7 @@ Through the use of indices in our database we managed to decrease the average re
 Everyone who handles large numbers of documents in MongoDB and isn't already using indices will benefit by introducing them in their collections.
 
 
-<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/photo_2017-12-19_22-41-38.jpg" alt="" width="100%" height="100%" border="5"></p>
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/photo_2017-12-19_22-41-38.jpg" alt="" width="70%" height="70%" border="5"></p>
 
 <p align="center"><i><font size="10">A graph showing the difference in response time from before and after introducing indices in the post collection. Please note that the Y-axsis (milliseconds) is logarithmic.</font></i></p>
 
