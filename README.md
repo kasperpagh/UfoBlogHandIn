@@ -9,11 +9,18 @@ Through the use of indices in our database we managed to decrease the average re
 
 Everyone who handles large numbers of documents in MongoDB and isn't already using indices will benefit by introducing them in their collections.
 
+
+<p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/photo_2017-12-19_22-41-38.jpg" alt="" width="25%" height="25%" border="5"></p>
+
+<p align="center"><i><font size="10">A graph showing the difference in response time from before and after introducing indices in the post collection. Please note that t Y-axsis (milliseconds) is logarithmic</font></i></p>
+
 ## Description of the Database
 
 In the recent school project, we have set up a simple REST API to handle a HackerNews clone site. For this basic site our teacher would automatically post posts to our API over the projects time period. This ended up with us having millions of posts stored in our database, since we were getting new posts all the time over several weeks. As of right now we have over 5 million posts:
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/david1.PNG" alt="" width="25%" height="25%" border="5"></p>
+
+<p align="center"><i><font size="10">the number of individual post elements in the posts collection</font></i></p>
 
 
 The backend for our web application is a Node.js instance running an Express server with mongoose to model our data to a Mongo database. Each post has several fields most related to the post itself, but some also relating the post to users and other posts.
@@ -43,6 +50,8 @@ Our web application is hosted on digitalocean on a very limited server. The serv
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/davidDoShot.PNG" alt="" width="50%" height="50%" border="5"></p>
 
+<p align="center"><i><font size="10">A screenshot from https://cloud.digitalocean.com/ where our backend is hosted.</font></i></p>
+
 ## Indices, What are They?
 
 Our backend ended up creating some issues. As the post counts started getting into the millions the response time of our backend had gotten excruciatingly slow. No person would want for any web service they use, to take upwards of 15 seconds per request. We had to fix this issue both for our sake and our users. Indices was our solution.
@@ -60,6 +69,8 @@ To introduce indices to your own collections is easy! The first thing you do is 
 You can either use a local instance of the mongo shell (HINT! If Mongo is in your path you can just write mongo to start the shell). 
 
 <p align="center"><img src="https://github.com/kasperpagh/UfoBlogHandIn/blob/master/pics/Screenshot-at-2017-12-0920-29-05.png" alt="" width="50%" height="50%" border="5"></p>
+
+<p align="center"><i><font size="10">locally installed mongo shell instance connecting to mongoDB</font></i></p>
 
 Or you can download a docker image including all the bells and whistles from DockerHub<a href="https://hub.docker.com/_/mongo/"><sup>[**3**]</sup></a>.
 If you use the image you have to start the mongo shell like this.
